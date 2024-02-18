@@ -1,3 +1,5 @@
+import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -20,6 +22,8 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+        val properties = gradleLocalProperties(rootDir)
+        buildConfigField("String", "API_KEY","\"${properties.getProperty("API_KEY")}\"" )
     }
 
     buildTypes {
@@ -39,6 +43,7 @@ android {
         kotlinOptions.jvmTarget = "1.8"
     }
     buildFeatures {
+        buildConfig = true
         compose = true
     }
     composeOptions {
