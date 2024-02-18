@@ -15,7 +15,7 @@ MovieCompose is an Android application that allows you to access movie details u
 
 ## Screenshots
 
-![MovieCompose](https://furkanyaman.com/public/moviecompose.gif)
+![MovieCompose](https://github.com/yamanf/MovieAppCompose/blob/main/moviecompose.gif)
 
 
 ## Contributing
